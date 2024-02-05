@@ -1,7 +1,7 @@
 # Домашнее задание к лекции 2.«Условные конструкции. Операции сравнения»
 ## Задача №1
-Задачи на hackerrank:
-Решить задачу на hackerrank "Python If-Else".
+Задачи на [hackerrank](https://www.hackerrank.com/):
+Решить задачу на hackerrank ["Python If-Else"](https://www.hackerrank.com/challenges/py-if-else/problem.)
 
 ## Задача №2
 На лекции мы рассматривали пример для военкомата. Сейчас мы знаем про его рост. Расширить это приложение следующими условиями:
