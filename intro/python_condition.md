@@ -1,6 +1,6 @@
 # Домашнее задание к лекции 2.«Условные конструкции. Операции сравнения»
 ## Задача №1
-Задачи на [hackerrank](https://www.hackerrank.com/):
+Задачи на [hackerrank](https://www.hackerrank.com/):<br>
 Решить задачу на hackerrank ["Python If-Else"](https://www.hackerrank.com/challenges/py-if-else/problem.)
 
 ## Задача №2
