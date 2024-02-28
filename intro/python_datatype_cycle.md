@@ -88,9 +88,59 @@ person = 5
 
 ## Задача №1
 ````
+boys = ['Peter', 'Alex', 'John', 'Arthur', 'Richard']
+girls = ['Kate', 'Liza', 'Kira', 'Emma', 'Trisha']
+attemps = ['1']
 
+boys.sort()
+girls.sort()
+
+if len(boys) == len(girls):
+  couples=zip(boys,girls)
+  for one in attemps:
+    print('Идеальные пары:')
+    for boy,girl in couples:
+      print(f'{boy} и {girl}')
+else:
+  print('Кто-то может остаться без пары!')
 ````
 ## Задача №2
 ````
+person = 5
+cook_book = [
+  ['салат',
+      [
+        ['картофель', 100, 'гр.'],
+        ['морковь', 50, 'гр.'],
+        ['огурцы', 50, 'гр.'],
+        ['горошек', 30, 'гр.'],
+        ['майонез', 70, 'мл.'],
+      ]
+  ],
+  ['пицца',  
+      [
+        ['сыр', 50, 'гр.'],
+        ['томаты', 50, 'гр.'],
+        ['тесто', 100, 'гр.'],
+        ['бекон', 30, 'гр.'],
+        ['колбаса', 30, 'гр.'],
+        ['грибы', 20, 'гр.'],
+      ],
+  ],
+  ['фруктовый десерт',
+      [
+        ['хурма', 60, 'гр.'],
+        ['киви', 60, 'гр.'],
+        ['творог', 60, 'гр.'],
+        ['сахар', 10, 'гр.'],
+        ['мед', 50, 'мл.'],  
+      ]
+  ]
+]
 
+for kind in cook_book:
+  print(f'{kind[0]}:'.capitalize())
+  for kind1,kind2,kind3 in kind[0:][1]:
+    print(f'{kind1}, {kind2*person}{kind3}')
+  print()
 ````
