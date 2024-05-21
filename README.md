@@ -1,1 +1,1 @@
-# This repository was created for writting code on the python
+# This repository was created for education the python
