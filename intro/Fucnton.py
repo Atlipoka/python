@@ -130,6 +130,7 @@ def add_new_shelf(directories):
 
 ## below we can execute function
 
+# while True
 # find_people(documents)
 # find_shelf(directories)
 # doc_list(documents)
