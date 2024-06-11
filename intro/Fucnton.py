@@ -34,7 +34,7 @@ def find_shelf(directories):
         if inputs in value:
             shelf_num = key
     if shelf_num != []:
-        print(f'Номер полки - {shelf_num}')
+        print(f'Документ лежит на полке - {shelf_num}')
     else:
         print('Вы ввели некорректный номер документа или запись с таким документом отсутствует')
 
@@ -129,12 +129,24 @@ def add_new_shelf(directories):
     print(directories)
 
 ## below we can execute function
+def main():
+    while True:
+        action = input('Введите действие: ')
+        if action == 'Поиск документа':
+            find_people(documents)
+        elif action == 'Поиск полки':
+            find_shelf(directories)
+        elif action == 'Список документов':
+            doc_list(documents)
+        elif action == 'Добавить новый документ':
+            add_new_document(documents, directories)
+        elif action == 'Удалить документ':
+            delete_document(documents, directories)
+        elif action == 'Переместить документ':
+            move_doc_on_new_shelf(documents, directories)
+        elif action == 'Добавить новую полку':
+            add_new_shelf(directories)
+        elif action == 'Выход' or 'выход':
+            break
 
-# while True
-# find_people(documents)
-# find_shelf(directories)
-# doc_list(documents)
-# add_new_document(documents, directories)
-# delete_document(documents, directories)
-# move_doc_on_new_shelf(documents, directories)
-# add_new_shelf(directories)
+main()
