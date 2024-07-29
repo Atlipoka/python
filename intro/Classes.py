@@ -11,12 +11,20 @@ class Goose:
       self.weight = weight
       self.feature = feature
 
-   def have_eggs(self, none):
-      val = input('Нужно ли собирать яйца, напишите Да или Нет: ')
+   def have_eggs(self):
+      val = input(f'Нужно ли собирать {self.feature}, напишите Да или Нет: ')
       if val == 'Да':
          print(f'Яйца собраны у гуся {self.name}')
       else:
          print('Яйца собирать не нужно')
+
+   def eat(self):
+      val = input(f'Вы хотите покормить гуся {self.name}? Можно выбрать траву, комбикорм или сено: ')
+      if val in ('Трава', 'Комбикорм', 'Сено'):
+         self.weight = self.weight + 0.01
+         print(f'Вы покрмили животное {val}, теперь вес {self.name} стал {self.weight}')
+      else:
+         print(f'Кормить {self.name} не нужно')
 
 class Cow:
    need_eat = 'Да'
@@ -27,12 +35,20 @@ class Cow:
       self.weight = weight
       self.feature = feature
 
-   def make_milk(self, none):
-      val = input('Нужно ли подоить корову, напишите Да или Нет')
+   def make_milk(self):
+      val = input(f'Нужно ли подоить корову {self.name}, напишите Да или Нет')
       if val == 'Да':
          print(f'Корова {self.name} подоена')
       else:
-         print('Корову доить ненужно')
+         print(f'Корову {self.name} доить ненужно')
+
+   def eat(self):
+      val = input(f'Вы хотите покормить корову {self.name}? Можно выбрать траву, комбикорм или сено: ')
+      if val in ('Трава', 'Комбикорм', 'Сено'):
+         self.weight = self.weight + 0.2
+         print(f'Вы покрмили животное {val}, теперь вес {self.name} стал {self.weight}')
+      else:
+         print(f'Кормить корову {self.name} не нужно')
 
 class Sheep:
    need_eat = 'Да'
@@ -43,12 +59,20 @@ class Sheep:
       self.weight = weight
       self.feature = feature
 
-   def make_milk(self, none):
-      val = input('Нужно ли подстричь офцу, напишите Да или Нет')
+   def make_milk(self):
+      val = input(f'Нужно ли подстричь офцу {self.name}, напишите Да или Нет')
       if val == 'Да':
          print(f'Овца {self.name} подстрижена')
       else:
-         print('Овцу стричь ненужно')
+         print(f'Овцу {self.name} стричь ненужно')
+
+   def eat(self):
+      val = input(f'Вы хотите покормить овцу {self.name}? Можно выбрать траву, комбикорм или сено: ')
+      if val in ('Трава', 'Комбикорм', 'Сено'):
+         self.weight = self.weight + 0.1
+         print(f'Вы покрмили животное {val}, теперь вес {self.name} стал {self.weight}')
+      else:
+         print(f'Кормить овцу {self.name} не нужно')
 
 class Chiken:
    need_eat = 'yes'
@@ -59,12 +83,20 @@ class Chiken:
       self.weight = weight
       self.feature = feature
 
-   def have_eggs(self, none):
-      val = input('Нужно ли собирать яйца, напишите Да или Нет: ')
+   def have_eggs(self):
+      val = input(f'Нужно ли собирать яйца у курочки {self.name}, напишите Да или Нет: ')
       if val == 'Да':
          print(f'Яйца собраны у курочки {self.name}')
       else:
-         print('Яйца собирать не нужно')
+         print(f'У курочки {self.name} яйца собирать не нужно')
+
+   def eat(self):
+      val = input(f'Вы хотите покормить овцу {self.name}? Можно выбрать траву, комбикорм или сено: ')
+      if val in ('Трава', 'Комбикорм', 'Сено'):
+         self.weight = self.weight + 0.01
+         print(f'Вы покрмили животное {val}, теперь вес {self.name} стал {self.weight}')
+      else:
+         print(f'Кормить овцу {self.name} не нужно')
 
 class Goat:
    need_eat = 'yes'
@@ -75,12 +107,21 @@ class Goat:
       self.weight = weight
       self.feature = feature
 
-   def make_milk(self, none):
-      val = input('Нужно ли подоить козу, напишите Да или Нет')
+   def make_milk(self):
+      val = input(f'Нужно ли подоить козу {self.name}, напишите Да или Нет')
       if val == 'Да':
          print(f'Коза {self.name} подоена')
       else:
-         print('Козу доить ненужно')
+         print(f'Козу {self.name} доить ненужно')
+
+   def eat(self):
+      val = input(f'Вы хотите покормить козу {self.name}? Можно выбрать траву, комбикорм или сено: ')
+      if val in ('Трава', 'Комбикорм', 'Сено'):
+         self.weight = self.weight + 0.1
+         print(f'Вы покрмили животное {val}, теперь вес {self.name} стал {self.weight}')
+      else:
+         print(f'Кормить козу {self.name} не нужно')
+
 
 class Duck:
    need_eat = 'yes'
@@ -91,19 +132,31 @@ class Duck:
       self.weight = weight
       self.feature = feature
 
-   def have_eggs(self, none):
-      val = input('Нужно ли собирать яйца, напишите Да или Нет: ')
+   def have_eggs(self):
+      val = input(f'Нужно ли собирать яйца у утки {self.name}, напишите Да или Нет: ')
       if val == 'Да':
          print(f'Яйца собраны у утки {self.name}')
       else:
-         print('Яйца собирать не нужно')
+         print(f'Яйца у утки {self.name} собирать не нужно')
+
+   def eat(self):
+      val = input(f'Вы хотите покормить козу {self.name}? Можно выбрать траву, комбикорм или сено: ')
+      if val in ('Трава', 'Комбикорм', 'Сено'):
+         self.weight = self.weight + 0.1
+         print(f'Вы покрмили животное {val}, теперь вес {self.name} стал {self.weight}')
+      else:
+         print(f'Кормить козу {self.name} не нужно')
 
 ## Присваиваем значения классов объектам
 
 # Гуси "Серый" и "Белый"
 gray_goose = Goose('Серый', 2, 'Несет яйца')
-gray_goose.have_eggs()
-print(gray_goose.name, gray_goose.weight)
+# gray_goose.have_eggs('')
+gray_goose.eat()
+# print(gray_goose.name, gray_goose.weight)
+duck = Duck('Кря', 2, 'Несет яйца')
+print(duck.name)
+duck.have_eggs()
 # print(dir(gray_goose)) # получение всех параметров метода
 #
 # white_goose = Goose()
