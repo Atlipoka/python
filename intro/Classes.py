@@ -12,15 +12,15 @@ class Goose:
       self.feature = feature
 
    def have_eggs(self):
-      val = input(f'Нужно ли собирать {self.feature}, напишите Да или Нет: ')
+      val = input(f'Нужно ли собирать яйца у гуся {self.name}, напишите Да или Нет: ')
       if val == 'Да':
          print(f'Яйца собраны у гуся {self.name}')
       else:
          print('Яйца собирать не нужно')
 
    def eat(self):
-      val = input(f'Вы хотите покормить гуся {self.name}? Можно выбрать траву, комбикорм или сено: ')
-      if val in ('Трава', 'Комбикорм', 'Сено'):
+      val = input(f'Чем вы хотите покормить гуся {self.name}? Можно покрмить травой, комбикормом или сеном: ')
+      if val in ('Травой', 'Комбикормом', 'Сеном'):
          self.weight = self.weight + 0.01
          print(f'Вы покрмили животное {val}, теперь вес {self.name} стал {self.weight}')
       else:
@@ -36,15 +36,15 @@ class Cow:
       self.feature = feature
 
    def make_milk(self):
-      val = input(f'Нужно ли подоить корову {self.name}, напишите Да или Нет')
+      val = input(f'Нужно ли подоить корову {self.name}, напишите Да или Нет: ')
       if val == 'Да':
          print(f'Корова {self.name} подоена')
       else:
          print(f'Корову {self.name} доить ненужно')
 
    def eat(self):
-      val = input(f'Вы хотите покормить корову {self.name}? Можно выбрать траву, комбикорм или сено: ')
-      if val in ('Трава', 'Комбикорм', 'Сено'):
+      val = input(f'Чем вы хотите покормить корову {self.name}? Можно покрмить травой, комбикормом или сеном: ')
+      if val in ('Травой', 'Комбикормом', 'Сеном'):
          self.weight = self.weight + 0.2
          print(f'Вы покрмили животное {val}, теперь вес {self.name} стал {self.weight}')
       else:
@@ -59,16 +59,16 @@ class Sheep:
       self.weight = weight
       self.feature = feature
 
-   def make_milk(self):
-      val = input(f'Нужно ли подстричь офцу {self.name}, напишите Да или Нет')
+   def сut(self):
+      val = input(f'Нужно ли подстричь овцу {self.name}, напишите Да или Нет: ')
       if val == 'Да':
          print(f'Овца {self.name} подстрижена')
       else:
          print(f'Овцу {self.name} стричь ненужно')
 
    def eat(self):
-      val = input(f'Вы хотите покормить овцу {self.name}? Можно выбрать траву, комбикорм или сено: ')
-      if val in ('Трава', 'Комбикорм', 'Сено'):
+      val = input(f'Чем вы хотите покормить барашка {self.name}? Можно покрмить травой, комбикормом или сеном: ')
+      if val in ('Травой', 'Комбикормом', 'Сеном'):
          self.weight = self.weight + 0.1
          print(f'Вы покрмили животное {val}, теперь вес {self.name} стал {self.weight}')
       else:
@@ -91,12 +91,12 @@ class Chiken:
          print(f'У курочки {self.name} яйца собирать не нужно')
 
    def eat(self):
-      val = input(f'Вы хотите покормить овцу {self.name}? Можно выбрать траву, комбикорм или сено: ')
-      if val in ('Трава', 'Комбикорм', 'Сено'):
+      val = input(f'Чем вы хотите покормить курочку {self.name}? Можно покрмить травой, комбикормом или сеном: ')
+      if val in ('Травой', 'Комбикормом', 'Сеном'):
          self.weight = self.weight + 0.01
          print(f'Вы покрмили животное {val}, теперь вес {self.name} стал {self.weight}')
       else:
-         print(f'Кормить овцу {self.name} не нужно')
+         print(f'Кормить курочку {self.name} не нужно')
 
 class Goat:
    need_eat = 'yes'
@@ -108,15 +108,15 @@ class Goat:
       self.feature = feature
 
    def make_milk(self):
-      val = input(f'Нужно ли подоить козу {self.name}, напишите Да или Нет')
+      val = input(f'Нужно ли подоить козу {self.name}, напишите Да или Нет: ')
       if val == 'Да':
          print(f'Коза {self.name} подоена')
       else:
          print(f'Козу {self.name} доить ненужно')
 
    def eat(self):
-      val = input(f'Вы хотите покормить козу {self.name}? Можно выбрать траву, комбикорм или сено: ')
-      if val in ('Трава', 'Комбикорм', 'Сено'):
+      val = input(f'Чем вы хотите покормить козу {self.name}? Можно покрмить травой, комбикормом или сеном: ')
+      if val in ('Травой', 'Комбикормом', 'Сеном'):
          self.weight = self.weight + 0.1
          print(f'Вы покрмили животное {val}, теперь вес {self.name} стал {self.weight}')
       else:
@@ -140,8 +140,8 @@ class Duck:
          print(f'Яйца у утки {self.name} собирать не нужно')
 
    def eat(self):
-      val = input(f'Вы хотите покормить козу {self.name}? Можно выбрать траву, комбикорм или сено: ')
-      if val in ('Трава', 'Комбикорм', 'Сено'):
+      val = input(f'Чем вы хотите покормить утку {self.name}? Можно покрмить травой, комбикормом или сеном: ')
+      if val in ('Травой', 'Комбикормом', 'Сеном'):
          self.weight = self.weight + 0.1
          print(f'Вы покрмили животное {val}, теперь вес {self.name} стал {self.weight}')
       else:
@@ -151,62 +151,60 @@ class Duck:
 
 # Гуси "Серый" и "Белый"
 gray_goose = Goose('Серый', 2, 'Несет яйца')
-# gray_goose.have_eggs('')
-gray_goose.eat()
-# print(gray_goose.name, gray_goose.weight)
-duck = Duck('Кря', 2, 'Несет яйца')
-print(duck.name)
-duck.have_eggs()
-# print(dir(gray_goose)) # получение всех параметров метода
-#
-# white_goose = Goose()
-# white_goose.name = 'Белый'
-# print(f'Имена гусей - {gray_goose.name} и {white_goose.name}')
-# print(f'Вес гуся {gray_goose.name} = {gray_goose.weight}кг.')
-# # print(dir(white_goose)) # получение всех параметров метода
-#
-# # Корова "Манька"
-#
-# сow_manya = Cow()
-# сow_manya.name = 'Манька'
-# print(f'Имя коровы - {сow_manya.name}, дает молоко? - {сow_manya.milk}')
-#
-# # Овцы "Барашек" и "Кудрявый"
-#
-# sheep_barash = Sheep()
-# sheep_curly = Sheep()
-#
-# sheep_barash.name = 'Барашек'
-# sheep_curly.name = 'Кудрявый'
-#
-# print(f'Имя барашков - {sheep_barash.name} и {sheep_curly.name}')
-#
-# # Куры "Ко-ко" и "Кукареку"
-#
-# chiken_coco = Chiken()
-# chiken_kykareky = Chiken()
-#
-# chiken_coco.name = 'Ко-ко'
-# chiken_kykareky.name = 'Кукареку'
-#
-# print(f'Имя курочек - {chiken_coco.name} и {chiken_kykareky.name}')
-#
-# # Козы "Рога" и "Копыта"
-#
-# goat_horns = Goat()
-# goat_hooves = Goat()
-#
-# goat_horns.name = 'Рога'
-# goat_hooves.name = 'Копыта'
-#
-# print(f'Имя коз - {goat_horns.name} и {goat_hooves.name}')
-#
-# # Утка "Крыква"
-#
-# duck_krykva = Duck()
-#
-# duck_krykva.name = 'Крыква'
-# print(duck_krykva.__dict__)
-# print(f'Имя утки  - {duck_krykva.name}')
-#
-# duck_krykva.have_eggs()
+white_goose = Goose('Белый', 2, 'Несет яйца')
+# print(gray_goose.name, white_goose.name)
+# gray_goose.have_eggs()
+# gray_goose.eat()
+
+# Корова Манька
+
+cow_manya = Cow('Манька', 50, 'Дает молоко')
+# cow_manya.make_milk()
+# cow_manya.eat()
+# print(cow_manya.name)
+
+# Овцы Барашек и Кудрявый
+
+sheep_barashek = Sheep('Барашек', 15, 'Дает шерсть')
+sheep_curly = Sheep('Кудрявый', 15, 'Дает шерсть')
+# sheep_barashek.сut(), sheep_barashek.eat()
+# sheep_curly.сut(), sheep_curly.eat()
+# print(sheep_barashek.name, sheep_curly.name)
+
+# Курочки Ко-Ко и Кукареку
+
+chiken_coco = Chiken('Ко-Ко', 3, 'Несет яйца')
+chiken_kukareku = Chiken('Кукареку', 3, 'Несет яйца')
+# chiken_coco.eat(), chiken_kukareku.eat()
+# chiken_coco.have_eggs(), chiken_kukareku.have_eggs()
+# print(chiken_coco.name, chiken_kukareku.name)
+
+# Козы Рога и Копыта
+
+goat_horns = Goat('Рога', 10, 'Дает молоко')
+goat_hoofs = Goat('Копыта', 10, 'Дает молоко')
+# goat_horns.eat(), goat_hoofs.eat()
+# goat_horns.make_milk(), goat_hoofs.make_milk()
+# print(goat_horns.name, goat_hoofs.name)
+
+# Утка Кряква
+
+duck_cryakva = Duck('Кряква', 3, 'Несет яйца')
+# duck_cryakva.eat(), duck_cryakva.have_eggs()
+# print(duck_cryakva.name)
+
+### Считаем общий вес всех животных и вывести самого тяжелого животного
+
+summary_weight = gray_goose.weight + white_goose.weight + cow_manya.weight + sheep_curly.weight + sheep_barashek.weight + chiken_coco.weight + chiken_kukareku.weight + goat_hoofs.weight + goat_horns.weight + duck_cryakva.weight
+print(f'Общий вес всех животных составляет - {summary_weight}кг')
+
+list = [[gray_goose.name, gray_goose.weight], [white_goose.name, white_goose.weight], [cow_manya.name, cow_manya.weight], [sheep_curly.name, sheep_curly.weight], [sheep_barashek.name, sheep_barashek.weight], [chiken_coco.name, chiken_coco.weight], [chiken_kukareku.name, chiken_kukareku.weight], [goat_horns.name, goat_horns.weight], [goat_hoofs.name, goat_hoofs.weight], [duck_cryakva.name, duck_cryakva.weight]]
+
+weight = 0
+animal_name = ''
+for name, weig in list:
+   if weig > weight:
+      weight = weig
+      animal_name = name
+
+print(f'Животное, с самым большим весом - {animal_name}')
