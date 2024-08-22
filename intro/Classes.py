@@ -1,6 +1,6 @@
 ### Этот файл был создан для практики написания классов в рамках лекции по классам в Нетологии
 #
-## Определяем классы
+## Задача №1 "Ферма Дядюшки Джо"
 
 class Goose:
    need_eat = 'Да'
@@ -196,7 +196,7 @@ duck_cryakva = Duck('Кряква', 3, 'Несет яйца')
 ### Считаем общий вес всех животных и вывести самого тяжелого животного
 
 summary_weight = gray_goose.weight + white_goose.weight + cow_manya.weight + sheep_curly.weight + sheep_barashek.weight + chiken_coco.weight + chiken_kukareku.weight + goat_hoofs.weight + goat_horns.weight + duck_cryakva.weight
-print(f'Общий вес всех животных составляет - {summary_weight}кг')
+# print(f'Общий вес всех животных составляет - {summary_weight}кг')
 
 list = [[gray_goose.name, gray_goose.weight], [white_goose.name, white_goose.weight], [cow_manya.name, cow_manya.weight], [sheep_curly.name, sheep_curly.weight], [sheep_barashek.name, sheep_barashek.weight], [chiken_coco.name, chiken_coco.weight], [chiken_kukareku.name, chiken_kukareku.weight], [goat_horns.name, goat_horns.weight], [goat_hoofs.name, goat_hoofs.weight], [duck_cryakva.name, duck_cryakva.weight]]
 
@@ -207,4 +207,55 @@ for name, weig in list:
       weight = weig
       animal_name = name
 
-print(f'Животное, с самым большим весом - {animal_name}')
+# print(f'Животное, с самым большим весом - {animal_name}')
+
+## Задача №2 "Аудиоколлекция"
+
+class Track:
+
+   def __init__(self, name, duration):
+      self.name = name
+      self.duration = duration
+
+   def show(self):
+      print(f'Название трэка {self.name}, длительность {self.duration} мин')
+
+
+class Album:
+
+   def __init__(self, name, group, tracks):
+      self.name = name
+      self.group = group
+      self.tracks = tracks
+
+   def get_tracks(self):
+      print('Ниже быдет выведена информация по всем трэкам в альбоме')
+      for track in self.tracks:
+         track.show()
+
+   def add_track(self, track):
+      self.tracks.append(track)
+
+   def get_duration(self):
+      album_duration = 0
+      for duration in self.tracks:
+         album_duration += duration.duration
+      print(f'Общая длительность альбома - {album_duration} мин')
+
+# talling = Track('talling', 4)
+# soul = Track('soul', 5)
+# print(talling.name, talling.duration)
+
+violator_tracks = [Track('Personal Jesus', 5), Track('Enjoy the Silence', 4), Track('Clean', 3)]
+violator = Album('Violator', 'Depeche Mode', violator_tracks)
+
+# Проверям методы класса
+violator.add_track(Track('Оblivion', 5))
+violator.get_tracks()
+violator.get_duration()
+
+# best = Album('best', 'madonna', talling.name)
+# best.add_track()
+# best.get_tracks()
+# print(best.tracks)
+
