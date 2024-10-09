@@ -49,6 +49,8 @@ class Track:
    def __str__(self):
       return f'Название трэка {self.name}, длительность {self.duration} мин'
 
+   def __lt__(self, track):
+       return self.duration < track.duration
 
 class Album:
 
@@ -56,12 +58,6 @@ class Album:
       self.name = name
       self.group = group
       self.tracks = tracks
-
-   # def __str__(self):
-   #    print('Ниже быдет выведена информация по всем трэкам в альбоме')
-   #    for track in self.tracks:
-   #        print(track)
-   #    return f'инфа'
 
    def add_track(self, track):
       self.tracks.append(track)
@@ -86,11 +82,11 @@ track3 = Track('Clean', 3)
 violator_tracks = [track1, track2, track3]
 violator = Album('Violator', 'Depeche Mode', violator_tracks)
 
-# print(track2)
-
 # Проверям методы класса
 # violator.add_track(Track('Оblivion', 5))
 # print(violator_tracks)
 print(violator)
+print(track1 > track3)
 # violator.get_duration()
----end---
+###end###
+
