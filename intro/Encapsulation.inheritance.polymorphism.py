@@ -112,4 +112,3 @@ violator = Album('Violator', 'Depeche Mode', violator_tracks)
 # print(violator)
 # print(track1 > track3)
 # violator.get_duration()
-
