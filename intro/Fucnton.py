@@ -146,7 +146,7 @@ def main():
             move_doc_on_new_shelf(documents, directories)
         elif action == 'Добавить новую полку':
             add_new_shelf(directories)
-        elif action == 'Выход' or 'выход':
+        elif action == 'Выход' or 'выход' or 'Exit' or 'q':
             break
 
 main()
